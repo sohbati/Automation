@@ -1,0 +1,668 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{805D55AD-B63D-43E7-B227-EDD8D5CF6153}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Andicator</RootNamespace>
+    <AssemblyName>Automation</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>News_16.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ALVCS03CONTROLS">
+      <HintPath>resources\ALVCS03CONTROLS.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Base, Version=2010.1.700.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\stimul\Stimulsoft.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Controls, Version=2010.1.700.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\stimul\Stimulsoft.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Controls.Win, Version=2010.1.700.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\stimul\Stimulsoft.Controls.Win.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Database, Version=2010.1.700.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\stimul\Stimulsoft.Database.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Editor, Version=2010.1.700.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\stimul\Stimulsoft.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report, Version=2010.1.700.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\stimul\Stimulsoft.Report.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="about\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="about\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controls\AdvanceSearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="controls\AdvanceSearchForm.Designer.cs">
+      <DependentUpon>AdvanceSearchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controls\AgentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="controls\AgentForm.Designer.cs">
+      <DependentUpon>AgentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controls\AttachmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="controls\AttachmentForm.Designer.cs">
+      <DependentUpon>AttachmentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controls\ChequeAdvanceSearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="controls\ChequeAdvanceSearchForm.Designer.cs">
+      <DependentUpon>ChequeAdvanceSearchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controls\ChequeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="controls\ChequeForm.Designer.cs">
+      <DependentUpon>ChequeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controls\ChequeRefferenceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="controls\ChequeRefferenceForm.Designer.cs">
+      <DependentUpon>ChequeRefferenceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controls\ChequeReplyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="controls\ChequeReplyForm.Designer.cs">
+      <DependentUpon>ChequeReplyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controls\CompanyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="controls\CompanyForm.Designer.cs">
+      <DependentUpon>CompanyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controls\ChequeFormPerm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="controls\ChequeFormPerm.Designer.cs">
+      <DependentUpon>ChequeFormPerm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controls\AttachmentChequeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="controls\AttachmentChequeForm.Designer.cs">
+      <DependentUpon>AttachmentChequeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controls\AttachmentChequeReceiptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="controls\AttachmentChequeReceiptForm.Designer.cs">
+      <DependentUpon>AttachmentChequeReceiptForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controls\DeleteUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="controls\DeleteUserForm.Designer.cs">
+      <DependentUpon>DeleteUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controls\LetterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="controls\LetterForm.Designer.cs">
+      <DependentUpon>LetterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controls\LetterItemsPermForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="controls\LetterItemsPermForm.Designer.cs">
+      <DependentUpon>LetterItemsPermForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controls\LetterStateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="controls\LetterStateForm.Designer.cs">
+      <DependentUpon>LetterStateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controls\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="controls\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controls\MenuPersmissionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="controls\MenuPersmissionForm.Designer.cs">
+      <DependentUpon>MenuPersmissionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controls\LetterRefferencesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="controls\LetterRefferencesForm.Designer.cs">
+      <DependentUpon>LetterRefferencesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controls\ReferenceCycleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="controls\ReferenceCycleForm.Designer.cs">
+      <DependentUpon>ReferenceCycleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controls\RefferToAnotherUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="controls\RefferToAnotherUserForm.Designer.cs">
+      <DependentUpon>RefferToAnotherUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controls\RefferToForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="controls\RefferToForm.Designer.cs">
+      <DependentUpon>RefferToForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controls\tools\SearchTools.cs" />
+    <Compile Include="hasti\basicInfo\BasciInfoEntity.cs" />
+    <Compile Include="hasti\basicInfo\MultiBasicInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hasti\basicInfo\MultiBasicInfoForm.Designer.cs">
+      <DependentUpon>MultiBasicInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="help\ChangeLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="help\ChangeLog.Designer.cs">
+      <DependentUpon>ChangeLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="help\HelpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="help\HelpForm.Designer.cs">
+      <DependentUpon>HelpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="help\Prompt.cs" />
+    <Compile Include="lists\AgentList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lists\AgentList.Designer.cs">
+      <DependentUpon>AgentList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lists\AttachmentList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lists\AttachmentList.Designer.cs">
+      <DependentUpon>AttachmentList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lists\ChequeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lists\ChequeList.Designer.cs">
+      <DependentUpon>ChequeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lists\LetterGroupSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lists\LetterGroupSelect.Designer.cs">
+      <DependentUpon>LetterGroupSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lists\LetterGroupList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lists\LetterGroupList.Designer.cs">
+      <DependentUpon>LetterGroupList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lists\CompanyList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lists\CompanyList.Designer.cs">
+      <DependentUpon>CompanyList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lists\AttachmentChequeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lists\AttachmentChequeList.Designer.cs">
+      <DependentUpon>AttachmentChequeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lists\AttachmentChequeReceiptList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lists\AttachmentChequeReceiptList.Designer.cs">
+      <DependentUpon>AttachmentChequeReceiptList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lists\FastDoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lists\FastDoForm.Designer.cs">
+      <DependentUpon>FastDoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lists\LetterAnswerCountList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lists\LetterAnswerCountList.Designer.cs">
+      <DependentUpon>LetterAnswerCountList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lists\LetterPatternDesignList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lists\LetterPatternDesignList.Designer.cs">
+      <DependentUpon>LetterPatternDesignList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lists\LetterRefferToUsersStatistics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lists\LetterRefferToUsersStatistics.Designer.cs">
+      <DependentUpon>LetterRefferToUsersStatistics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lists\LetterRefferToUsersStatistics2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lists\LetterRefferToUsersStatistics2.Designer.cs">
+      <DependentUpon>LetterRefferToUsersStatistics2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lists\LetterSimpleList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lists\LetterSimpleList.Designer.cs">
+      <DependentUpon>LetterSimpleList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lists\RefCycleList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lists\RefCycleList.Designer.cs">
+      <DependentUpon>RefCycleList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lists\StatisticSimpleListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lists\StatisticSimpleListForm.Designer.cs">
+      <DependentUpon>StatisticSimpleListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lists\LetterGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lists\LetterGroup.Designer.cs">
+      <DependentUpon>LetterGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lists\UserList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lists\UserList.Designer.cs">
+      <DependentUpon>UserList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lists\UsersTreeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lists\UsersTreeForm.Designer.cs">
+      <DependentUpon>UsersTreeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lists\UsersWorkingStattisticList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lists\UsersWorkingStattisticList.Designer.cs">
+      <DependentUpon>UsersWorkingStattisticList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="scan\Scanner.cs" />
+    <Compile Include="setting\ColorSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="setting\ColorSetting.Designer.cs">
+      <DependentUpon>ColorSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="setting\LetterNumberPatternDesign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="setting\LetterNumberPatternDesign.Designer.cs">
+      <DependentUpon>LetterNumberPatternDesign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controls\SettingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="controls\SettingForm.Designer.cs">
+      <DependentUpon>SettingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controls\UserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="controls\UserForm.Designer.cs">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="controls\UsersReplyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="controls\UsersReplyForm.Designer.cs">
+      <DependentUpon>UsersReplyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="hasti\basicInfo\BasicInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hasti\basicInfo\BasicInfoForm.Designer.cs">
+      <DependentUpon>BasicInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="hasti\basicInfo\BasicInfoList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hasti\basicInfo\BasicInfoList.Designer.cs">
+      <DependentUpon>BasicInfoList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lists\LetterList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lists\LetterList.Designer.cs">
+      <DependentUpon>LetterList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="util\Util.cs" />
+    <EmbeddedResource Include="about\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\AdvanceSearchForm.resx">
+      <DependentUpon>AdvanceSearchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\AgentForm.resx">
+      <DependentUpon>AgentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\AttachmentForm.resx">
+      <DependentUpon>AttachmentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\ChequeAdvanceSearchForm.resx">
+      <DependentUpon>ChequeAdvanceSearchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\ChequeForm.resx">
+      <DependentUpon>ChequeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\ChequeRefferenceForm.resx">
+      <DependentUpon>ChequeRefferenceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\ChequeReplyForm.resx">
+      <DependentUpon>ChequeReplyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\CompanyForm.resx">
+      <DependentUpon>CompanyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\ChequeFormPerm.resx">
+      <DependentUpon>ChequeFormPerm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\AttachmentChequeForm.resx">
+      <DependentUpon>AttachmentChequeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\AttachmentChequeReceiptForm.resx">
+      <DependentUpon>AttachmentChequeReceiptForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\DeleteUserForm.resx">
+      <DependentUpon>DeleteUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\LetterForm.resx">
+      <DependentUpon>LetterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\LetterItemsPermForm.resx">
+      <DependentUpon>LetterItemsPermForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\LetterStateForm.resx">
+      <DependentUpon>LetterStateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\MenuPersmissionForm.resx">
+      <DependentUpon>MenuPersmissionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\LetterRefferencesForm.resx">
+      <DependentUpon>LetterRefferencesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\ReferenceCycleForm.resx">
+      <DependentUpon>ReferenceCycleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\RefferToAnotherUserForm.resx">
+      <DependentUpon>RefferToAnotherUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\RefferToForm.resx">
+      <DependentUpon>RefferToForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hasti\basicInfo\MultiBasicInfoForm.resx">
+      <DependentUpon>MultiBasicInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="help\ChangeLog.resx">
+      <DependentUpon>ChangeLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="help\HelpForm.resx">
+      <DependentUpon>HelpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\AgentList.resx">
+      <DependentUpon>AgentList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\AttachmentList.resx">
+      <DependentUpon>AttachmentList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\ChequeList.resx">
+      <DependentUpon>ChequeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\LetterGroupSelect.resx">
+      <DependentUpon>LetterGroupSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\LetterGroupList.resx">
+      <DependentUpon>LetterGroupList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\CompanyList.resx">
+      <DependentUpon>CompanyList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\AttachmentChequeList.resx">
+      <DependentUpon>AttachmentChequeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\AttachmentChequeReceiptList.resx">
+      <DependentUpon>AttachmentChequeReceiptList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\FastDoForm.resx">
+      <DependentUpon>FastDoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\LetterAnswerCountList.resx">
+      <DependentUpon>LetterAnswerCountList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\LetterPatternDesignList.resx">
+      <DependentUpon>LetterPatternDesignList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\LetterRefferToUsersStatistics.resx">
+      <DependentUpon>LetterRefferToUsersStatistics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\LetterRefferToUsersStatistics2.resx">
+      <DependentUpon>LetterRefferToUsersStatistics2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\LetterSimpleList.resx">
+      <DependentUpon>LetterSimpleList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\RefCycleList.resx">
+      <DependentUpon>RefCycleList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\StatisticSimpleListForm.resx">
+      <DependentUpon>StatisticSimpleListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\LetterGroup.resx">
+      <DependentUpon>LetterGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\UserList.resx">
+      <DependentUpon>UserList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\UsersTreeForm.resx">
+      <DependentUpon>UsersTreeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\UsersWorkingStattisticList.resx">
+      <DependentUpon>UsersWorkingStattisticList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="setting\ColorSetting.resx">
+      <DependentUpon>ColorSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="setting\LetterNumberPatternDesign.resx">
+      <DependentUpon>LetterNumberPatternDesign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\SettingForm.resx">
+      <DependentUpon>SettingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\UserForm.resx">
+      <DependentUpon>UserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="controls\UsersReplyForm.resx">
+      <DependentUpon>UsersReplyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hasti\basicInfo\BasicInfoForm.resx">
+      <DependentUpon>BasicInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hasti\basicInfo\BasicInfoList.resx">
+      <DependentUpon>BasicInfoList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lists\LetterList.resx">
+      <DependentUpon>LetterList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AndicatorBLL\AndicatorBLL.csproj">
+      <Project>{6BA998EB-8509-472F-A96A-F74BB62587B8}</Project>
+      <Name>AndicatorBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AndicatorCommon\AndicatorCommon.csproj">
+      <Project>{A72B2E5B-32E8-4B1A-80E2-6380B20EDDF4}</Project>
+      <Name>AndicatorCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RMX_TOOLS\RMX_TOOLS.csproj">
+      <Project>{07D874A5-542A-4220-9746-1C437FB2240F}</Project>
+      <Name>RMX_TOOLS</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\stat.png" />
+    <None Include="resources\login.png" />
+    <None Include="resources\login2.png" />
+    <None Include="resources\business-mneting.jpg" />
+    <None Include="resources\thb.jpg" />
+    <Content Include="News_16.ico" />
+    <None Include="resources\fastAccess1.png" />
+    <None Include="resources\fastAccess2.png" />
+    <Content Include="stat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="WIA">
+      <Guid>{94A0E92D-43C0-494E-AC29-FD45948A5221}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="print\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,14 @@
+USE [andicator]
+GO
+
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_REFERLETTER_USERS]') AND parent_object_id = OBJECT_ID(N'[dbo].[REFERLETTER]'))
+ALTER TABLE [dbo].[REFERLETTER] DROP CONSTRAINT [FK_REFERLETTER_USERS]
+GO
+
+USE [andicator]
+GO
+
+IF  EXISTS (SELECT * FROM sys.foreign_keys WHERE object_id = OBJECT_ID(N'[dbo].[FK_REFERLETTER_USERS1]') AND parent_object_id = OBJECT_ID(N'[dbo].[REFERLETTER]'))
+ALTER TABLE [dbo].[REFERLETTER] DROP CONSTRAINT [FK_REFERLETTER_USERS1]
+GO
+

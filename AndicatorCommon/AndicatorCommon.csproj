@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A72B2E5B-32E8-4B1A-80E2-6380B20EDDF4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AndicatorCommon</RootNamespace>
+    <AssemblyName>AndicatorCommon</AssemblyName>
+    <TargetFrameworkVersion>v3.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AgentEntity.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AttachmentEntity.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ChequeEntity.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ChequeFieldsPermissionEntity.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ChequeReplyEntity.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CompanyEntity.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AttachmentChequeEntity.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AttachmentChequeEntityReceipt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LetterGroupEntity.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LetterEntity.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LetterNumberPatternEntity.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LetterItemsPermissionEntity.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LetterReplyCountViewEntity.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LetterStateEntity.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReferChequeEntity.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReferenceCycleEntity.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReferLetterEntity.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserPropertiesEntity.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UsersEntity.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UsersReplyEntity.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserTreeEntity.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WorkingStatisticEntity.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RMX_TOOLS\RMX_TOOLS.csproj">
+      <Project>{07D874A5-542A-4220-9746-1C437FB2240F}</Project>
+      <Name>RMX_TOOLS</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
